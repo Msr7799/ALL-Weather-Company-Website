@@ -189,7 +189,7 @@ export default function CrewPage() {
                                 className="h-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative"
                             >
                                 <Image
-                                    src="/crew-page/5.png"
+                                    src="/crew-page/pump.webp"
                                     alt="Pure Water Spray"
                                     fill
                                     className="object-cover"
