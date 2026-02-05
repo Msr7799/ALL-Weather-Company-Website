@@ -1,0 +1,113 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "crew": "Equipment & Crew",
+        "book": "Book Now"
+    },
+    "Hero": {
+        "title": "Professional Drone Cleaning Solutions",
+        "subtitle": "Using DJI Matrice 350 RTK with deionized water technology to clean high-rise buildings, facades, and glass surfaces without leaving any spots or residue.",
+        "cta": "Book a Service",
+        "learnMore": "Learn More"
+    },
+    "Services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive drone-powered cleaning solutions for all types of buildings and surfaces",
+        "exterior": {
+            "title": "Facade Cleaning",
+            "description": "Professional high-rise building facade cleaning using advanced drone technology and deionized water"
+        },
+        "drone": {
+            "title": "Drone Washing",
+            "description": "State-of-the-art DJI Matrice 350 RTK drone equipped with high-pressure cleaning systems"
+        },
+        "interior": {
+            "title": "Glass Cleaning",
+            "description": "Streak-free glass cleaning with deionized water that leaves no spots or residue"
+        },
+        "solar": {
+            "title": "Solar Panel Cleaning",
+            "description": "Efficient solar panel cleaning to maximize energy output and extend panel life"
+        },
+        "inspection": {
+            "title": "Aerial Inspection",
+            "description": "Detailed aerial inspection of buildings and infrastructure using high-resolution cameras"
+        },
+        "emergency": {
+            "title": "Emergency Service",
+            "description": "24/7 emergency cleaning services available for urgent requirements"
+        }
+    },
+    "About": {
+        "title": "About ALL Weather",
+        "subtitle": "Leading the future of building maintenance with cutting-edge drone technology",
+        "description": "ALL Weather is a pioneering cleaning company specializing in high-rise building facade cleaning using DJI Matrice 350 RTK drones. Our technology uses deionized water that leaves no spots on glass surfaces.",
+        "pilots": {
+            "title": "Certified Pilots",
+            "description": "Our pilots are trained in professional flight courses, including advanced control techniques, efficient washing methods, risk management, and property protection protocols."
+        },
+        "tech": {
+            "title": "Advanced Technology",
+            "description": "We use the latest DJI Matrice 350 RTK drones equipped with specialized cleaning payloads for safe and efficient high-rise cleaning."
+        },
+        "safety": {
+            "title": "Safety First",
+            "description": "Zero accidents with comprehensive safety protocols and risk assessment for every project."
+        }
+    },
+    "Contact": {
+        "title": "Contact Us",
+        "whatsapp": "WhatsApp",
+        "location": "Our Location",
+        "address": "Zallaq, Bahrain"
+    },
+    "Calendar": {
+        "title": "Book Your Service",
+        "subtitle": "Select a date for your cleaning appointment",
+        "bookBtn": "Confirm Booking",
+        "selected": "Selected Date"
+    },
+    "Footer": {
+        "rights": "All rights reserved"
+    },
+    "CrewPage": {
+        "title": "Our Equipment and Crew",
+        "intro": {
+            "title": "Excellence Starts Here",
+            "description": "At Bofahain, we believe quality starts with the right tools and the right people. We have invested in the latest technology and built a team of the nation's finest youth."
+        },
+        "equipment": {
+            "title": "Latest Drone Technology",
+            "description": "Our fleet of DJI drones represents the pinnacle of cleaning and inspection technology. Our equipment is characterized by high precision and operational efficiency, ensuring we reach the most difficult places safely and quickly."
+        },
+        "water": {
+            "title": "100% Pure Water",
+            "description": "We use advanced water treatment systems to produce De-ionized Water, free from ions and salts. This technology ensures perfect cleaning for glass facades and solar panels without leaving any spots or residues.",
+            "features": {
+                "impurities": "0% Impurities",
+                "deepClean": "Deep Clean",
+                "eco": "Eco Friendly",
+                "noStains": "No Stains"
+            },
+            "badges": {
+                "dji": "DJI Enterprise",
+                "pure": "Pure Tech",
+                "team": "Expert Team"
+            }
+        },
+        "team": {
+            "title": "Professional Bahraini Crew",
+            "description": "We are proud of our ambitious Bahraini crew. Our pilots and technicians are highly trained and certified to perform complex tasks with precision and professionalism. They are experts passionate about delivering the best.",
+            "card1": {
+                "title": "Field Experts",
+                "desc": "High precision and safety standards"
+            },
+            "card2": {
+                "title": "Certified Pilots",
+                "desc": "Professional control and maneuvering"
+            }
+        }
+    }
+}
