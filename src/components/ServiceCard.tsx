@@ -35,7 +35,7 @@ export function ServiceCard({ title, description, icon: Icon, index }: ServiceCa
                 whileHover={{ rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.4 }}
             >
-                <Icon className="w-7 h-7 text-slate-400" />
+                <Icon className="w-7 h-7" style={{ color: "oklch(51.1% 0.096 186.391)" }} />
             </motion.div>
 
             {/* Content */}

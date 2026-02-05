@@ -120,112 +120,112 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* emerald accent color - Vibrant Premium Emerald */
+/* sky accent color - Vibrant Premium Sky */
 
 /* Light Mode - Deep, Rich & Vibrant */
-.text-emerald-400 {
-  color: oklch(50% 0.22 160); /* Much richer/darker green */
+.text-sky-400 {
+  color: oklch(60% 0.16 240); /* Rich Sky Blue */
 }
 
-.text-emerald-500 {
-  color: oklch(40% 0.24 160); /* Very deep, vibrant green */
+.text-sky-500 {
+  color: oklch(50% 0.18 240); /* Deep Sky Blue */
 }
 
-.bg-emerald-400 {
-  background-color: oklch(60% 0.2 160 / 0.2);
+.bg-sky-400 {
+  background-color: oklch(70% 0.14 240);
 }
 
-.bg-emerald-500 {
-  background-color: oklch(53.459% 0.157 147.461 / 0.422);
+.bg-sky-500 {
+  background-color: oklch(60% 0.16 240);
 }
 
-.border-emerald-500\/20 {
-  border-color: oklch(45% 0.22 160 / 0.3);
+.border-sky-500\/20 {
+  border-color: oklch(55% 0.16 240 / 0.3);
 }
 
-.border-emerald-500\/30 {
-  border-color: oklch(45% 0.22 160 / 0.4);
+.border-sky-500\/30 {
+  border-color: oklch(55% 0.16 240 / 0.4);
 }
 
-.from-emerald-500\/5 {
-  --tw-gradient-from: oklch(50% 0.22 160 / 0.1);
+.from-sky-500\/5 {
+  --tw-gradient-from: oklch(60% 0.16 240 / 0.1);
 }
 
-.from-emerald-500\/10 {
-  --tw-gradient-from: oklch(50% 0.22 160 / 0.15);
+.from-sky-500\/10 {
+  --tw-gradient-from: oklch(60% 0.16 240 / 0.15);
 }
 
-.from-emerald-500\/20 {
-  --tw-gradient-from: oklch(50% 0.22 160 / 0.25);
+.from-sky-500\/20 {
+  --tw-gradient-from: oklch(60% 0.16 240 / 0.25);
 }
 
-.to-emerald-500\/5 {
-  --tw-gradient-to: oklch(50% 0.22 160 / 0.1);
+.to-sky-500\/5 {
+  --tw-gradient-to: oklch(60% 0.16 240 / 0.1);
 }
 
-.shadow-emerald-500\/25 {
-  --tw-shadow-color: oklch(50% 0.22 160 / 0.25);
+.shadow-sky-500\/25 {
+  --tw-shadow-color: oklch(60% 0.16 240 / 0.25);
 }
 
-.shadow-emerald-500\/30 {
-  --tw-shadow-color: oklch(50% 0.22 160 / 0.35);
+.shadow-sky-500\/30 {
+  --tw-shadow-color: oklch(60% 0.16 240 / 0.35);
 }
 
-.hover\:shadow-emerald-500\/40:hover {
-  --tw-shadow-color: oklch(50% 0.22 160 / 0.45);
+.hover\:shadow-sky-500\/40:hover {
+  --tw-shadow-color: oklch(60% 0.16 240 / 0.45);
 }
 
 /* Dark Mode - Neon & Luminous */
-.dark .text-emerald-400 {
-  color: oklch(88% 0.2 155); /* Super bright neon green */
+.dark .text-sky-400 {
+  color: oklch(85% 0.14 240); /* Super bright neon sky */
 }
 
-.dark .text-emerald-500 {
-  color: oklch(78% 0.22 155);
+.dark .text-sky-500 {
+  color: oklch(75% 0.16 240);
 }
 
-.dark .bg-emerald-400 {
-  background-color: oklch(70% 0.2 155 / 0.15);
+.dark .bg-sky-400 {
+  background-color: oklch(70% 0.14 240);
 }
 
-.dark .bg-emerald-500 {
-  background-color: oklch(60% 0.22 155 / 0.25);
+.dark .bg-sky-500 {
+  background-color: oklch(60% 0.16 240);
 }
 
-.dark .border-emerald-500\/20 {
-  border-color: oklch(70% 0.22 155 / 0.3);
+.dark .border-sky-500\/20 {
+  border-color: oklch(75% 0.16 240 / 0.3);
 }
 
-.dark .border-emerald-500\/30 {
-  border-color: oklch(70% 0.22 155 / 0.4);
+.dark .border-sky-500\/30 {
+  border-color: oklch(75% 0.16 240 / 0.4);
 }
 
-.dark .from-emerald-500\/5 {
-  --tw-gradient-from: oklch(70% 0.22 155 / 0.1);
+.dark .from-sky-500\/5 {
+  --tw-gradient-from: oklch(75% 0.16 240 / 0.1);
 }
 
-.dark .from-emerald-500\/10 {
-  --tw-gradient-from: oklch(70% 0.22 155 / 0.2);
+.dark .from-sky-500\/10 {
+  --tw-gradient-from: oklch(75% 0.16 240 / 0.2);
 }
 
-.dark .from-emerald-500\/20 {
-  --tw-gradient-from: oklch(70% 0.22 155 / 0.3);
+.dark .from-sky-500\/20 {
+  --tw-gradient-from: oklch(75% 0.16 240 / 0.3);
 }
 
-.dark .to-emerald-500\/5 {
-  --tw-gradient-to: oklch(70% 0.22 155 / 0.1);
+.dark .to-sky-500\/5 {
+  --tw-gradient-to: oklch(75% 0.16 240 / 0.1);
 }
 
-.dark .shadow-emerald-500\/25 {
-  --tw-shadow-color: oklch(70% 0.22 155 / 0.25);
+.dark .shadow-sky-500\/25 {
+  --tw-shadow-color: oklch(75% 0.16 240 / 0.25);
 }
 
-.dark .shadow-emerald-500\/30 {
-  --tw-shadow-color: oklch(70% 0.22 155 / 0.35);
+.dark .shadow-sky-500\/30 {
+  --tw-shadow-color: oklch(75% 0.16 240 / 0.35);
 }
 
-.dark .hover\:shadow-emerald-500\/40:hover {
-  --tw-shadow-color: oklch(70% 0.22 155 / 0.5);
+.dark .hover\:shadow-sky-500\/40:hover {
+  --tw-shadow-color: oklch(75% 0.16 240 / 0.5);
 }
 
 /* Green for WhatsApp */

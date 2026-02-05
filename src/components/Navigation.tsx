@@ -124,7 +124,7 @@ export function Navigation({ locale }: { locale: string }) {
                         {/* CTA Button */}
                         <Link
                             href="/book"
-                            className="inline-flex h-10 items-center justify-center rounded-full bg-stone-500 px-6 text-sm font-medium text-white shadow-lg shadow-stone-700/25 transition-all hover:bg-stone-200 hover:shadow-stone-700/30"
+                            className="inline-flex h-10 items-center justify-center rounded-full bg-zinc-900 border-2 border-zinc-400 px-6 text-sm font-medium text-white shadow-lg shadow-zinc-700/25 transition-all hover:bg-zinc-950 hover:shadow-zinc-900/30"
                         >
                             {t("book")}
                         </Link>
@@ -175,7 +175,7 @@ export function Navigation({ locale }: { locale: string }) {
                             <Link
                                 href="/book"
                                 onClick={() => setIsOpen(false)}
-                                className="inline-flex h-12 items-center justify-center rounded-full bg-stone-500 px-6 text-sm font-medium text-white shadow-lg w-full mt-4"
+                                className="inline-flex h-12 items-center justify-center rounded-full bg-slate-500 px-6 text-sm font-medium text-white shadow-lg w-full mt-4 hover:bg-slate-800 transition-colors"
                             >
                                 {t("book")}
                             </Link>

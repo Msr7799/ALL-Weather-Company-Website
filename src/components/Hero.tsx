@@ -21,7 +21,7 @@ export function Hero() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background VEDIO */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/20 to-background z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/5 to-background z-10" />
                 <video
                     autoPlay
                     loop
@@ -53,7 +53,7 @@ export function Hero() {
                 {particlePositions.map((pos, i) => (
                     <motion.div
                         key={i}
-                        className="absolute w-1 h-1 bg-emerald-400/30 rounded-full"
+                        className="absolute w-1 h-1 bg-sky-400/30 rounded-full"
                         style={{ left: `${pos.left}%`, top: `${pos.top}%` }}
                         animate={{
                             y: [0, -20, 0],
@@ -91,10 +91,10 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-8"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-8 backdrop-blur-sm"
                 >
-                    <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span>DJI Matrice 350 RTK</span>
+                    <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+                    <span className="drop-shadow-sm">DJI Matrice 350 RTK</span>
                 </motion.div>
 
                 <motion.h1
@@ -125,7 +125,7 @@ export function Hero() {
                 >
                     <Link
                         href="/book"
-                        className="group relative inline-flex h-14 items-center justify-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-500 text-emerald-500 dark:text-emerald-400 px-8 text-sm font-semibold backdrop-blur-md shadow-lg shadow-emerald-500/10 transition-all hover:bg-emerald-500 hover:text-white hover:shadow-emerald-500/40"
+                        className="group relative inline-flex h-14 items-center justify-center gap-2 rounded-full bg-slate-900/40 border border-sky-500/50 text-sky-400 px-8 text-sm font-semibold backdrop-blur-md shadow-lg shadow-sky-500/10 transition-all hover:bg-sky-500 hover:border-sky-500 hover:text-white hover:shadow-sky-500/40"
                     >
                         <span>{t("cta")}</span>
                         <motion.span
@@ -138,7 +138,7 @@ export function Hero() {
 
                     <Link
                         href="/#services"
-                        className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 backdrop-blur-sm px-8 text-sm font-medium text-foreground transition-all hover:bg-emerald-500/10 hover:border-emerald-500/50"
+                        className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-sky-500/30 bg-slate-900/40 backdrop-blur-sm px-8 text-sm font-medium text-white transition-all hover:bg-slate-800/60 hover:border-sky-500/50"
                     >
                         {t("learnMore")}
                     </Link>
@@ -158,7 +158,7 @@ export function Hero() {
                         { value: "0", label: "Accidents" },
                     ].map((stat, i) => (
                         <div key={i} className="text-center">
-                            <div className="text-3xl md:text-4xl font-bold text-emerald-400">{stat.value}</div>
+                            <div className="text-3xl md:text-4xl font-bold text-sky-400">{stat.value}</div>
                             <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
                         </div>
                     ))}
@@ -173,7 +173,7 @@ export function Hero() {
             >
                 <div className="flex flex-col items-center gap-2">
                     <span className="text-xs text-muted-foreground uppercase tracking-widest">Scroll</span>
-                    <ChevronDown className="w-5 h-5 text-emerald-400" />
+                    <ChevronDown className="w-5 h-5 text-sky-400" />
                 </div>
             </motion.div>
         </section>
