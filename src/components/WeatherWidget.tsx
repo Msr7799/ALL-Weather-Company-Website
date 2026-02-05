@@ -124,11 +124,12 @@ export function WeatherWidget({ locale }: { locale: string }) {
     return (
         <motion.div
             layout
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: locale === "ar" ? 20 : -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             onClick={() => setIsExpanded(!isExpanded)}
-            className={`absolute top-24 left-4 md:left-10 z-30 bg-card/60 backdrop-blur-md border border-border/50 shadow-xl cursor-pointer overflow-hidden group hover:bg-card/70 transition-colors ${isExpanded ? "rounded-3xl p-6 min-w-[320px]" : "rounded-full px-6 py-3 min-w-[260px]"
+            className={`absolute top-24 z-30 bg-card/60 backdrop-blur-md border border-border/50 shadow-xl cursor-pointer overflow-hidden group hover:bg-card/70 transition-colors ${locale === "ar" ? "right-4 md:right-10" : "left-4 md:left-10"
+                } ${isExpanded ? "rounded-3xl p-6 min-w-[320px]" : "rounded-full px-6 py-3 min-w-[260px]"
                 }`}
         >
             {/* Header / Summary View */}
@@ -170,10 +171,10 @@ export function WeatherWidget({ locale }: { locale: string }) {
                             </div>
                             <div
                                 className={`w-3 h-3 rounded-full border-2 ${windStatus.level === "safe"
-                                        ? "bg-green-500 border-green-500/30 shadow-[0_0_10px_rgba(34,197,94,0.5)]"
-                                        : windStatus.level === "caution"
-                                            ? "bg-yellow-500 border-yellow-500/30 shadow-[0_0_10px_rgba(234,179,8,0.5)]"
-                                            : "bg-red-500 border-red-500/30 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.5)]"
+                                    ? "bg-green-500 border-green-500/30 shadow-[0_0_10px_rgba(34,197,94,0.5)]"
+                                    : windStatus.level === "caution"
+                                        ? "bg-yellow-500 border-yellow-500/30 shadow-[0_0_10px_rgba(234,179,8,0.5)]"
+                                        : "bg-red-500 border-red-500/30 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.5)]"
                                     }`}
                             />
                         </>
@@ -209,10 +210,10 @@ export function WeatherWidget({ locale }: { locale: string }) {
                                     </div>
                                     <div className="text-xl font-bold">{weather.windSpeed} <span className="text-sm font-normal text-muted-foreground">m/s</span></div>
                                     <div className={`text-xs px-2 py-0.5 rounded-full inline-block ${windStatus.level === "safe"
-                                            ? "bg-green-500/10 text-green-500"
-                                            : windStatus.level === "caution"
-                                                ? "bg-yellow-500/10 text-yellow-500"
-                                                : "bg-red-500/10 text-red-500"
+                                        ? "bg-green-500/10 text-green-500"
+                                        : windStatus.level === "caution"
+                                            ? "bg-yellow-500/10 text-yellow-500"
+                                            : "bg-red-500/10 text-red-500"
                                         }`}>
                                         {locale === "ar" ? windStatus.messageAr.split(" - ")[0] : windStatus.message.split(" - ")[0]}
                                     </div>
