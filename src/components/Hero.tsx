@@ -94,7 +94,7 @@ export function Hero() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-8 backdrop-blur-sm"
                 >
                     <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
-                    <span className="drop-shadow-sm">DJI Matrice 350 RTK</span>
+                    <span className="drop-shadow-sm">Advanced Technology</span>
                 </motion.div>
 
                 <motion.h1

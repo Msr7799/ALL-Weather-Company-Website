@@ -69,12 +69,12 @@ export default function HomePage() {
               Technology
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mt-4 mb-6">
-              DJI Matrice 350 RTK
+              Advanced Drone
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               {locale === "ar"
-                ? "نستخدم أحدث تقنيات الدرون مع نظام الماء منزوع الأيونات للحصول على تنظيف مثالي بدون بقع"
-                : "We use the latest drone technology with deionized water system for perfect spot-free cleaning"}
+                ? "نستخدم أحدث تقنيات الدرون مع نظام مياه متطور للحصول على تنظيف مثالي بدون بقع"
+                : "We use the latest drone technology with advanced water system for perfect spot-free cleaning"}
             </p>
           </motion.div>
 
@@ -88,7 +88,7 @@ export default function HomePage() {
             <div className="aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-card to-accent/20 border border-border/50 shadow-2xl">
               <Image
                 src="/crew-page/crew-page-clear.png"
-                alt="DJI Matrice 350 RTK"
+                alt="Advanced Drone"
                 width={1200}
                 height={675}
                 className="w-full h-full object-cover"
@@ -100,7 +100,7 @@ export default function HomePage() {
                 {[
                   locale === "ar" ? "55 دقيقة طيران" : "55 min Flight Time",
                   locale === "ar" ? "9 كجم حمولة" : "9 kg Payload",
-                  locale === "ar" ? "دقة RTK" : "RTK Precision",
+                  locale === "ar" ? "دقة عالية" : "High Precision",
                   "IP55",
                 ].map((feature, i) => (
                   <span

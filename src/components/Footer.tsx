@@ -139,14 +139,9 @@ export function Footer({ locale }: { locale: string }) {
             {/* Bottom Bar */}
             <div className="border-t border-border">
                 <div className="container mx-auto px-4 py-6">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+                    <div className="flex items-center justify-center text-sm text-muted-foreground">
                         <p>
                             © {new Date().getFullYear()} ALL Weather. {t("rights")}.
-                        </p>
-                        <p className="text-xs">
-                            {locale === "ar"
-                                ? "مدعوم بتقنية DJI Matrice 350 RTK"
-                                : "Powered by DJI Matrice 350 RTK Technology"}
                         </p>
                     </div>
                 </div>

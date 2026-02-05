@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "ALL Weather | Drone Cleaning Services Bahrain",
     template: "%s | ALL Weather Bahrain"
   },
-  description: "Leading cleaning company in Bahrain using DJI Matrice 350 RTK drones for high-rise building facades, glass cleaning, and solar panels. Water-fed pole system available.",
+  description: "Leading cleaning company in Bahrain using advanced drones for high-rise building facades, glass cleaning, and solar panels. Water-fed pole system available.",
   keywords: [
     // العربية
     "شركة تنظيف البحرين",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Drone cleaning services",
     "Facade cleaning Bahrain",
     "High-rise window cleaning",
-    "DJI drone cleaning",
+    "Drone cleaning",
     "Solar panel cleaning",
     "Glass cleaning robot"
   ],
@@ -72,7 +72,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   "name": "ALL Weather Cleaning Solutions",
   "image": "https://allweather.bh/logo.png",
-  "description": "Professional high-rise cleaning services using DJI drones and deionized water technology.",
+  "description": "Professional high-rise cleaning services using advanced drones and purified water technology.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Zallaq",
