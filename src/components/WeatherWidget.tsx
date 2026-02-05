@@ -147,7 +147,16 @@ export function WeatherWidget({ locale }: { locale: string }) {
                     <div className="flex flex-col">
                         <div className="flex items-center gap-2">
                             <span className="text-2xl font-bold leading-none">{weather.temp}°</span>
-                            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Bahrain</span>
+                            <div className="flex items-center gap-1">
+                                <Image
+                                    src="/Flag-of-Bahrain.svg"
+                                    alt="Bahrain Flag"
+                                    width={16}
+                                    height={12}
+                                    className="rounded-[2px]"
+                                />
+                                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Bahrain</span>
+                            </div>
                         </div>
                         {/* Show description in collapsed mode if space permits, or just hide */}
                         {!isExpanded && (

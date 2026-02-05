@@ -119,7 +119,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="absolute -bottom-8 right-8 bg-card/95 backdrop-blur-sm rounded-2xl p-4 border border-border shadow-xl hidden sm:block"
+              className={`absolute -bottom-8 ${locale === "ar" ? "left-8" : "right-8"} bg-card/95 backdrop-blur-sm rounded-2xl p-4 border border-border shadow-xl hidden sm:block`}
             >
               <div className="flex items-center gap-3">
                 <Image
