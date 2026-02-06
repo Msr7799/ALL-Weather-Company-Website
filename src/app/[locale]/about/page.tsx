@@ -39,10 +39,22 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="pt-32 pb-20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/5 via-transparent to-transparent" />
+            {/* Hero Section */}
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+                {/* Background Image */}
+                <Image
+                    src="/hero-about.png"
+                    alt="About Hero"
+                    fill
+                    className="object-cover"
+                    priority
+                />
 
-                <div className="container mx-auto px-4 relative z-10">
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-background" />
+
+                <div className="container mx-auto px-4 relative z-10 pt-20">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -52,10 +64,10 @@ export default function AboutPage() {
                         <span className="text-cyan-400 text-sm font-medium tracking-widest uppercase">
                             {locale === "ar" ? "من نحن" : "About Us"}
                         </span>
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mt-4 mb-6">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mt-4 mb-6 text-white">
                             {t("title")}
                         </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
+                        <p className="text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto">
                             {t("subtitle")}
                         </p>
                     </motion.div>

@@ -1,6 +1,13 @@
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { BackToTop } from "@/components/BackToTop";
 import { Navigation } from "@/components/Navigation";
+
+// ... existing imports
+
+// ... existing code
+
+
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -167,6 +174,7 @@ export default async function LocaleLayout({
           <main>
             {children}
           </main>
+          <BackToTop />
         </NextIntlClientProvider>
       </body>
     </html>

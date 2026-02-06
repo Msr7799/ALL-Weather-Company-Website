@@ -78,7 +78,7 @@ export function Hero() {
                     className="mb-8"
                 >
                     <Image
-                        src="/logo4.png"
+                        src="/logo5.png"
                         alt="ALL Weather Logo"
                         width={350}
                         height={150}
@@ -94,7 +94,7 @@ export function Hero() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-8 backdrop-blur-sm"
                 >
                     <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
-                    <span className="drop-shadow-sm">Now Available in Bahrain </span>
+                    <span className="drop-shadow-sm">{t("available")}</span>
                     <Image
                         src="/Flag-of-Bahrain.svg"
                         alt="Bahrain Flag"
@@ -123,7 +123,7 @@ export function Hero() {
                 >
                     {t("subtitle")}
                 </motion.p>
-                 {/*}
+                {/*}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -182,7 +182,7 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity }}
             >
                 <div className="flex flex-col items-center gap-2">
-                    <span className="text-xs text-muted-foreground uppercase tracking-widest">Learn More</span>
+                    <span className="text-xs text-muted-foreground uppercase tracking-widest">{t("scroll")}</span>
                     <ChevronDown className="w-5 h-5 text-sky-400" />
                 </div>
             </motion.div>

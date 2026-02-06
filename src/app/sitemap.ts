@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const locales = ["en", "ar"];
 
     // الصفحات الأساسية
-    const routes = ["", "/about", "/book"];
+    const routes = ["", "/about", "/book", "/crew-and-equipment"];
 
     const sitemapEntries: MetadataRoute.Sitemap = [];
 

@@ -82,10 +82,10 @@ export function Navigation({ locale }: { locale: string }) {
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors relative group",
+                                    "text-sm font-bold transition-colors relative group",
                                     pathname === item.href
-                                        ? "text-stone-200"
-                                        : "text-muted-foreground hover:text-foreground"
+                                        ? "text-white"
+                                        : "text-white/80 hover:text-white"
                                 )}
                             >
                                 {item.name}
@@ -101,7 +101,7 @@ export function Navigation({ locale }: { locale: string }) {
                         {/* Theme Toggle */}
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-full hover:bg-accent transition-colors"
+                            className="p-2 rounded-full hover:bg-white/10 text-white transition-colors"
                             aria-label="Toggle theme"
                         >
                             {isDark ? (
@@ -115,7 +115,7 @@ export function Navigation({ locale }: { locale: string }) {
                         <Link
                             href={pathname}
                             locale={switchLocale}
-                            className="flex items-center gap-2 p-2 hover:bg-accent rounded-full transition-colors text-sm"
+                            className="flex items-center gap-2 p-2 hover:bg-white/10 rounded-full transition-colors text-sm text-white"
                         >
                             <Globe className="w-4 h-4" />
                             <span>{locale === "en" ? "عربي" : "EN"}</span>

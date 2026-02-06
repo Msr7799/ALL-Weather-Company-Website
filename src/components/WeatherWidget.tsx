@@ -1,5 +1,4 @@
-"use client";
-
+import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Wind, MapPin } from "lucide-react";
@@ -41,31 +40,24 @@ function getWeatherIconPath(iconCode: string): string {
 // Get wind status based on speed (m/s)
 function getWindStatus(windSpeed: number): {
     level: "safe" | "caution" | "danger";
-    message: string;
-    messageAr: string;
 } {
     if (windSpeed <= 6) {
         return {
             level: "safe",
-            message: "Optimal flying conditions",
-            messageAr: "ظروف طيران مثالية",
         };
     } else if (windSpeed <= 12) {
         return {
             level: "caution",
-            message: "Moderate wind - proceed with care",
-            messageAr: "رياح معتدلة - المضي بحذر",
         };
     } else {
         return {
             level: "danger",
-            message: "Strong wind - not recommended",
-            messageAr: "رياح قوية - غير موصى به",
         };
     }
 }
 
 export function WeatherWidget({ locale }: { locale: string }) {
+    const t = useTranslations("Weather");
     const [weather, setWeather] = useState<WeatherData | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -86,7 +78,7 @@ export function WeatherWidget({ locale }: { locale: string }) {
                 }
 
                 const response = await fetch(
-                    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+                    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=${locale}`
                 );
 
                 if (!response.ok) {
@@ -114,7 +106,7 @@ export function WeatherWidget({ locale }: { locale: string }) {
         // Refresh every 10 minutes
         const interval = setInterval(fetchWeather, 600000);
         return () => clearInterval(interval);
-    }, []);
+    }, [locale]);
 
     if (loading) return null;
     if (error || !weather) return null;
@@ -148,9 +140,9 @@ export function WeatherWidget({ locale }: { locale: string }) {
                         <div className="flex items-center gap-2">
                             <span className="text-2xl font-bold leading-none">{weather.temp}°</span>
                             <div className="flex items-center gap-1">
-           
-                                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Bahrain</span>
-                 
+
+                                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{t("bahrain")}</span>
+
                             </div>
                         </div>
                         {/* Show description in collapsed mode if space permits, or just hide */}
@@ -171,7 +163,7 @@ export function WeatherWidget({ locale }: { locale: string }) {
                     {!isExpanded && (
                         <>
                             <div className="flex flex-col items-end">
-                                <span className="text-xs font-bold">{weather.windSpeed} m/s</span>
+                                <span className="text-xs font-bold">{weather.windSpeed} {t("ms")}</span>
                             </div>
                             <div
                                 className={`w-3 h-3 rounded-full border-2 ${windStatus.level === "safe"
@@ -210,34 +202,34 @@ export function WeatherWidget({ locale }: { locale: string }) {
                                 <div className="space-y-1">
                                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
                                         <Wind className="w-3 h-3" />
-                                        <span>Wind Speed</span>
+                                        <span>{t("windSpeed")}</span>
                                     </div>
-                                    <div className="text-xl font-bold">{weather.windSpeed} <span className="text-sm font-normal text-muted-foreground">m/s</span></div>
+                                    <div className="text-xl font-bold">{weather.windSpeed} <span className="text-sm font-normal text-muted-foreground">{t("ms")}</span></div>
                                     <div className={`text-xs px-2 py-0.5 rounded-full inline-block ${windStatus.level === "safe"
                                         ? "bg-green-500/10 text-green-500"
                                         : windStatus.level === "caution"
                                             ? "bg-yellow-500/10 text-yellow-500"
                                             : "bg-red-500/10 text-red-500"
                                         }`}>
-                                        {locale === "ar" ? windStatus.messageAr.split(" - ")[0] : windStatus.message.split(" - ")[0]}
+                                        {t(`status.${windStatus.level}`).split(" - ")[0]}
                                     </div>
                                 </div>
 
                                 {/* Additional Info (Humidity/Description) */}
                                 <div className="space-y-1">
                                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
-                                        <span className="capitalize">Condition</span>
+                                        <span className="capitalize">{t("condition")}</span>
                                     </div>
                                     <div className="text-sm font-medium capitalize line-clamp-2">{weather.description}</div>
                                     <div className="text-xs text-muted-foreground mt-1">
-                                        Humidity: {weather.humidity}%
+                                        {t("humidity")}: {weather.humidity}%
                                     </div>
                                 </div>
                             </div>
 
                             <p className={`text-xs mt-4 p-2 rounded-lg bg-accent/50 leading-relaxed ${windStatus.level !== "safe" ? "text-yellow-500 bg-yellow-500/5 border border-yellow-500/10" : "text-muted-foreground"
                                 }`}>
-                                {locale === "ar" ? windStatus.messageAr : windStatus.message}
+                                {t(`status.${windStatus.level}`)}
                             </p>
                         </div>
                     </motion.div>

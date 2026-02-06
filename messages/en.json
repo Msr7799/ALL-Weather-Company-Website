@@ -10,34 +10,48 @@
         "title": "ALL Weather Cleaning Solutions",
         "subtitle": " Drone Cleaning Solutions",
         "cta": "",
-        "learnMore": "Learn More"
+        "learnMore": "Learn More",
+        "available": "Now Available in Bahrain",
+        "scroll": "Learn More"
+    },
+    "Weather": {
+        "bahrain": "Bahrain",
+        "windSpeed": "Wind Speed",
+        "humidity": "Humidity",
+        "condition": "Condition",
+        "ms": "m/s",
+        "status": {
+            "safe": "Optimal flying conditions",
+            "caution": "Moderate wind - proceed with care",
+            "danger": "Strong wind - not recommended"
+        }
     },
     "Services": {
         "title": "Our Services",
-        "subtitle": "Comprehensive drone-powered cleaning solutions for all types of buildings and surfaces",
-        "exterior": {
-            "title": "Facade Cleaning",
-            "description": "Professional high-rise building facade cleaning using advanced drone technology and purified water systems"
+        "subtitle": "Transforming Industries with Drone Solutions",
+        "building_cleaning": {
+            "title": "Building Facade Cleaning",
+            "description": "Advanced cleaning of glass and concrete facades, eliminating the need for scaffolding or manual labor."
         },
-        "drone": {
-            "title": "Drone Washing",
-            "description": "State-of-the-art industrial drones equipped with high-pressure cleaning systems"
-        },
-        "interior": {
-            "title": "Glass Cleaning",
-            "description": "Streak-free glass cleaning with advanced water technology that leaves no spots or residue"
-        },
-        "solar": {
+        "solar_cleaning": {
             "title": "Solar Panel Cleaning",
-            "description": "Efficient solar panel cleaning to maximize energy output and extend panel life"
+            "description": "Removing dirt and debris to improve the operational efficiency of solar panels by up to 30%."
         },
-        "inspection": {
-            "title": "Aerial Inspection",
-            "description": "Detailed aerial inspection of buildings and infrastructure using high-resolution cameras"
+        "bridge_cleaning": {
+            "title": "Bridge and Highway Cleaning",
+            "description": "Cleaning surfaces and sidewalls of bridges and highways using precision drone mounted spraying systems."
         },
-        "emergency": {
-            "title": "Emergency Service",
-            "description": "24/7 emergency cleaning services available for urgent requirements"
+        "tank_cleaning": {
+            "title": "Large Water Tank Cleaning",
+            "description": "Specialized cleaning solutions for hard to reach water tanks."
+        },
+        "industrial_cleaning": {
+            "title": "Industrial Structure Cleaning",
+            "description": "Cleaning industrial structures such as cooling towers, silos, and metal infrastructure."
+        },
+        "surface_cleaning": {
+            "title": "Billboard and Elevated Surface Cleaning",
+            "description": "Efficient cleaning of high rise signage and billboards with drones."
         }
     },
     "About": {
@@ -109,5 +123,54 @@
                 "desc": "Professional control and maneuvering"
             }
         }
+    },
+    "Stats": {
+        "speed": {
+            "value": "10x",
+            "label": "Faster than Traditional Methods"
+        },
+        "safety": {
+            "value": "100%",
+            "label": "Risk-Free Operations"
+        },
+        "cost": {
+            "value": "-60%",
+            "label": "Cost Savings"
+        }
+    },
+    "Clients": {
+        "title": "Our Clients (Soon)",
+        "subtitle": "Proud to serve reliable organizations"
+    },
+    "Process": {
+        "title": "How We Work",
+        "subtitle": "Precise methodology to ensure highest quality and safety standards",
+        "step": "Step",
+        "assessment": {
+            "title": "Assessment",
+            "description": "Comprehensive site inspection to define surface types and optimal cleaning materials."
+        },
+        "safety": {
+            "title": "Safety Planning",
+            "description": "Mapping flight paths and establishing safety zones for secure operations."
+        },
+        "cleaning": {
+            "title": "Cleaning Execution",
+            "description": "High-pressure washing using purified water to remove all impurities effectively."
+        },
+        "report": {
+            "title": "Quality Check",
+            "description": "Final inspection and delivery of detailed report to ensure full client satisfaction."
+        }
+    },
+    "FAQ": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Answers to your questions about drone cleaning",
+        "q1": "Is drone cleaning safe for glass facades?",
+        "a1": "Yes, absolutely safe. We use calculated water pressure and Soft Wash techniques that leave no scratches, preserving the integrity and shine of the facades.",
+        "q2": "How is this different from traditional cleaning?",
+        "a2": "We save up to 80% of time, eliminate the need for expensive lifts, and ensure access to hard-to-reach areas safely.",
+        "q3": "Can you clean solar panels?",
+        "a3": "Certainly. Our technology is ideal for solar panels and helps increase energy production efficiency by up to 30% by precisely removing dust."
     }
 }
