@@ -76,7 +76,7 @@ export default function AboutPage() {
                         >
                             <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-card to-accent/20 border border-border/50">
                                 <Image
-                                    src="/about-drone.jpg"
+                                    src="/about-drone.png"
                                     alt="DJI Matrice 350 RTK Cleaning Drone"
                                     width={800}
                                     height={600}
@@ -118,7 +118,7 @@ export default function AboutPage() {
                                     ? "نقود ثورة في تنظيف المباني"
                                     : "Leading the Building Cleaning Revolution"}
                             </h2>
-                            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                            <p className="text-muted-foreground text-lg leading-relaxed mb-8 whitespace-pre-line">
                                 {t("description")}
                             </p>
 

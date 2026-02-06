@@ -12,7 +12,6 @@
         "cta": "",
         "learnMore": "Learn More"
     },
-
     "Services": {
         "title": "Our Services",
         "subtitle": "Comprehensive drone-powered cleaning solutions for all types of buildings and surfaces",
@@ -44,18 +43,18 @@
     "About": {
         "title": "About ALL Weather",
         "subtitle": "Leading the future of building maintenance with cutting-edge drone technology",
-        "description": "ALL Weather is a pioneering cleaning company specializing in high-rise building facade cleaning using advanced industrial drones. Our technology uses purified water that leaves no spots on glass surfaces.",
+        "description": "We work to provide quality and sustain the beauty and cleanliness of residential, commercial, and industrial facilities and facades.\nOur drones deliver excellence through professional, high-precision cleaning, with a spotless finish free of stains on glass.",
         "pilots": {
-            "title": "Certified Pilots",
-            "description": "Our pilots are trained in professional flight courses, including advanced control techniques, efficient washing methods, risk management, and property protection protocols."
+            "title": "Impressive Quality",
+            "description": "Higher quality and more impressive, better-looking results that ensure your building shines."
         },
         "tech": {
-            "title": "Professional Drone Cleaning Solutions",
-            "description": "We use the latest industrial drones equipped with specialized cleaning payloads for safe and efficient high-rise cleaning."
+            "title": "Efficiency & Accessibility",
+            "description": "Reaching areas and angles that manual labor cannot easily access, saving 80% of cleaning time compared to scaffolding and lifts. We clean hotels, factories, buildings, and all facilities."
         },
         "safety": {
-            "title": "Safety First",
-            "description": "Zero accidents with comprehensive safety protocols and risk assessment for every project."
+            "title": "Safety Assurance",
+            "description": "Significantly reduces the risks of working at height, ensuring the safety of both property and people."
         }
     },
     "Contact": {
@@ -84,17 +83,17 @@
             "description": "Our fleet of industrial drones represents the pinnacle of cleaning and inspection technology. Our equipment is characterized by high precision and operational efficiency, ensuring we reach the most difficult places safely and quickly."
         },
         "water": {
-            "title": "100% Pure Water",
-            "description": "We use advanced water treatment systems that ensure complete water purity. This technology ensures perfect cleaning for glass facades and solar panels without leaving any spots or residues.",
+            "title": "Quality & Sustainability",
+            "description": "We work to provide quality and sustain the beauty and cleanliness of residential, commercial, and industrial facilities and facades. Our drones deliver excellence through professional, high-precision cleaning, with a spotless finish free of stains on glass.",
             "features": {
-                "impurities": "0% Impurities",
+                "impurities": "High Precision",
                 "deepClean": "Deep Clean",
                 "eco": "Eco Friendly",
                 "noStains": "No Stains"
             },
             "badges": {
                 "dji": "Advanced Tech",
-                "pure": "Pure Tech",
+                "pure": "High Quality",
                 "team": "Expert Team"
             }
         },

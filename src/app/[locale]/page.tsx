@@ -105,7 +105,7 @@ export default function HomePage() {
                 ].map((feature, i) => (
                   <span
                     key={i}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-xs font-medium backdrop-blur-sm"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/70 border border-sky-600/30 text-sky-200 text-xs font-medium backdrop-blur-sm"
                   >
                     <span className="w-1.5 h-1.5 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
                     <span className="drop-shadow-sm">{feature}</span>
