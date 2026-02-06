@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { Link } from "@/i18n/routing";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -17,6 +18,17 @@ const particlePositions = [
 export function Hero() {
     const t = useTranslations("Hero");
 
+    const [isDark, setIsDark] = useState(true);
+
+    // Watch for theme changes on html element
+    useEffect(() => {
+        const checkTheme = () => setIsDark(document.documentElement.classList.contains("dark"));
+        checkTheme();
+        const observer = new MutationObserver(checkTheme);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background VEDIO */}
@@ -27,7 +39,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    poster="/hero-poster.png"
+                    poster="/crew-page/crew-page-clear.png"
                     className="w-full h-full object-cover"
                 >
                     <source src="/hero.mp4" type="video/mp4" />
@@ -78,7 +90,7 @@ export function Hero() {
                     className="mb-8"
                 >
                     <Image
-                        src="/logo5.png"
+                        src={!isDark ? "/logo2.png" : "/logo5.png"}
                         alt="ALL Weather Logo"
                         width={350}
                         height={150}

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { Phone, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 // WhatsApp Icon SVG
@@ -18,6 +19,17 @@ function WhatsAppIcon({ className }: { className?: string }) {
 export function Footer({ locale }: { locale: string }) {
     const t = useTranslations("Footer");
     const tContact = useTranslations("Contact");
+
+    const [isDark, setIsDark] = useState(false);
+
+    // Watch for theme changes on html element
+    useEffect(() => {
+        const checkTheme = () => setIsDark(document.documentElement.classList.contains("dark"));
+        checkTheme();
+        const observer = new MutationObserver(checkTheme);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+        return () => observer.disconnect();
+    }, []);
 
     const whatsappNumber = "+97339939053";
     const whatsappMessage = locale === "ar"
@@ -36,7 +48,7 @@ export function Footer({ locale }: { locale: string }) {
                     <div className="lg:col-span-2">
                         <Link href="/" className="flex items-center gap-3 mb-6">
                             <Image
-                                src="/logo2.png"
+                                src={!isDark ? "/logo2.png" : "/logo5.png"}
                                 alt="ALL Weather"
                                 width={60}
                                 height={50}

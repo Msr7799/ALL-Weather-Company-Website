@@ -24,10 +24,10 @@ export function Navigation({ locale }: { locale: string }) {
     }, []);
 
     useEffect(() => {
-        // Check for saved theme or system preference
+        // Check for saved theme
         const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+        // Default to dark if no saved theme, ignoring system preference
+        const shouldBeDark = savedTheme ? savedTheme === "dark" : true;
         setIsDark(shouldBeDark);
         document.documentElement.classList.toggle("dark", shouldBeDark);
     }, []);
@@ -64,13 +64,16 @@ export function Navigation({ locale }: { locale: string }) {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3">
                         <Image
-                            src="/logo2.png"
+                            src={!isDark ? "/logo2.png" : "/logo5.png"}
                             alt="ALL Weather"
                             width={50}
                             height={40}
                             className="w-auto h-10"
                         />
-                        <span className="text-lg font-bold tracking-tight hidden sm:block">
+                        <span className={cn(
+                            "text-lg font-bold tracking-tight hidden sm:block",
+                            scrolled && !isDark ? "text-black/80" : "text-white"
+                        )}>
                             ALL WEATHER
                         </span>
                     </Link>
@@ -84,14 +87,15 @@ export function Navigation({ locale }: { locale: string }) {
                                 className={cn(
                                     "text-sm font-bold transition-colors relative group",
                                     pathname === item.href
-                                        ? "text-white"
-                                        : "text-white/80 hover:text-white"
+                                        ? (scrolled && !isDark ? "text-black" : "text-white")
+                                        : (scrolled && !isDark ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white")
                                 )}
                             >
                                 {item.name}
                                 <span
                                     className={cn(
-                                        "absolute -bottom-1 left-0 h-0.5 bg-stone-200 transition-all",
+                                        "absolute -bottom-1 left-0 h-0.5 transition-all",
+                                        scrolled && !isDark ? "bg-black/80" : "bg-stone-200",
                                         pathname === item.href ? "w-full" : "w-0 group-hover:w-full"
                                     )}
                                 />
@@ -101,7 +105,10 @@ export function Navigation({ locale }: { locale: string }) {
                         {/* Theme Toggle */}
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-full hover:bg-white/10 text-white transition-colors"
+                            className={cn(
+                                "p-2 rounded-full transition-colors",
+                                scrolled && !isDark ? "text-black/80 hover:bg-black/5" : "text-white hover:bg-white/10"
+                            )}
                             aria-label="Toggle theme"
                         >
                             {isDark ? (
@@ -115,7 +122,10 @@ export function Navigation({ locale }: { locale: string }) {
                         <Link
                             href={pathname}
                             locale={switchLocale}
-                            className="flex items-center gap-2 p-2 hover:bg-white/10 rounded-full transition-colors text-sm text-white"
+                            className={cn(
+                                "flex items-center gap-2 p-2 rounded-full transition-colors text-sm",
+                                scrolled && !isDark ? "text-black/80 hover:bg-black/5" : "text-white hover:bg-white/10"
+                            )}
                         >
                             <Globe className="w-4 h-4" />
                             <span>{locale === "en" ? "عربي" : "EN"}</span>
@@ -134,12 +144,18 @@ export function Navigation({ locale }: { locale: string }) {
                     <div className="flex items-center gap-2 md:hidden">
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-full hover:bg-accent transition-colors"
+                            className={cn(
+                                "p-2 rounded-full transition-colors",
+                                scrolled && !isDark ? "text-black/80 hover:bg-black/5" : "text-white hover:bg-white/10"
+                            )}
                         >
                             {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                         </button>
                         <button
-                            className="p-2 rounded-full hover:bg-accent transition-colors"
+                            className={cn(
+                                "p-2 rounded-full transition-colors",
+                                scrolled && !isDark ? "text-black/80 hover:bg-black/5" : "text-white hover:bg-white/10"
+                            )}
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
