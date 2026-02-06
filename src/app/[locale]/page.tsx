@@ -98,16 +98,16 @@ export default function HomePage() {
               {/* Feature Tags */}
               <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-2">
                 {[
-                  locale === "ar" ? "55 دقيقة طيران" : "55 min Flight Time",
-                  locale === "ar" ? "9 كجم حمولة" : "9 kg Payload",
-                  locale === "ar" ? "دقة عالية" : "High Precision",
-                  "IP55",
+                  locale === "ar" ? "سرعة في الإنجاز" : "Fast Execution",
+                  locale === "ar" ? "جودة عالية" : "High Quality",
+                  locale === "ar" ? "ضمان على العمل" : "Work Guarantee",
                 ].map((feature, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1.5 bg-background/80 backdrop-blur-sm rounded-full text-xs font-medium border border-border/50"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-xs font-medium backdrop-blur-sm"
                   >
-                    {feature}
+                    <span className="w-1.5 h-1.5 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+                    <span className="drop-shadow-sm">{feature}</span>
                   </span>
                 ))}
               </div>

@@ -64,7 +64,7 @@ export function Navigation({ locale }: { locale: string }) {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3">
                         <Image
-                            src="/logo.png"
+                            src="/logo2.png"
                             alt="ALL Weather"
                             width={50}
                             height={40}

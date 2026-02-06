@@ -7,25 +7,26 @@
         "book": "Book Now"
     },
     "Hero": {
-        "title": "Professional Drone Cleaning Solutions",
-        "subtitle": "Using DJI Matrice 350 RTK with deionized water technology to clean high-rise buildings, facades, and glass surfaces without leaving any spots or residue.",
-        "cta": "Book a Service",
+        "title": "ALL Weather Cleaning Solutions",
+        "subtitle": " Drone Cleaning Solutions",
+        "cta": "",
         "learnMore": "Learn More"
     },
+
     "Services": {
         "title": "Our Services",
         "subtitle": "Comprehensive drone-powered cleaning solutions for all types of buildings and surfaces",
         "exterior": {
             "title": "Facade Cleaning",
-            "description": "Professional high-rise building facade cleaning using advanced drone technology and deionized water"
+            "description": "Professional high-rise building facade cleaning using advanced drone technology and purified water systems"
         },
         "drone": {
             "title": "Drone Washing",
-            "description": "State-of-the-art DJI Matrice 350 RTK drone equipped with high-pressure cleaning systems"
+            "description": "State-of-the-art industrial drones equipped with high-pressure cleaning systems"
         },
         "interior": {
             "title": "Glass Cleaning",
-            "description": "Streak-free glass cleaning with deionized water that leaves no spots or residue"
+            "description": "Streak-free glass cleaning with advanced water technology that leaves no spots or residue"
         },
         "solar": {
             "title": "Solar Panel Cleaning",
@@ -43,14 +44,14 @@
     "About": {
         "title": "About ALL Weather",
         "subtitle": "Leading the future of building maintenance with cutting-edge drone technology",
-        "description": "ALL Weather is a pioneering cleaning company specializing in high-rise building facade cleaning using DJI Matrice 350 RTK drones. Our technology uses deionized water that leaves no spots on glass surfaces.",
+        "description": "ALL Weather is a pioneering cleaning company specializing in high-rise building facade cleaning using advanced industrial drones. Our technology uses purified water that leaves no spots on glass surfaces.",
         "pilots": {
             "title": "Certified Pilots",
             "description": "Our pilots are trained in professional flight courses, including advanced control techniques, efficient washing methods, risk management, and property protection protocols."
         },
         "tech": {
-            "title": "Advanced Technology",
-            "description": "We use the latest DJI Matrice 350 RTK drones equipped with specialized cleaning payloads for safe and efficient high-rise cleaning."
+            "title": "Professional Drone Cleaning Solutions",
+            "description": "We use the latest industrial drones equipped with specialized cleaning payloads for safe and efficient high-rise cleaning."
         },
         "safety": {
             "title": "Safety First",
@@ -80,11 +81,11 @@
         },
         "equipment": {
             "title": "Latest Drone Technology",
-            "description": "Our fleet of DJI drones represents the pinnacle of cleaning and inspection technology. Our equipment is characterized by high precision and operational efficiency, ensuring we reach the most difficult places safely and quickly."
+            "description": "Our fleet of industrial drones represents the pinnacle of cleaning and inspection technology. Our equipment is characterized by high precision and operational efficiency, ensuring we reach the most difficult places safely and quickly."
         },
         "water": {
             "title": "100% Pure Water",
-            "description": "We use advanced water treatment systems to produce De-ionized Water, free from ions and salts. This technology ensures perfect cleaning for glass facades and solar panels without leaving any spots or residues.",
+            "description": "We use advanced water treatment systems that ensure complete water purity. This technology ensures perfect cleaning for glass facades and solar panels without leaving any spots or residues.",
             "features": {
                 "impurities": "0% Impurities",
                 "deepClean": "Deep Clean",
@@ -92,7 +93,7 @@
                 "noStains": "No Stains"
             },
             "badges": {
-                "dji": "DJI Enterprise",
+                "dji": "Advanced Tech",
                 "pure": "Pure Tech",
                 "team": "Expert Team"
             }

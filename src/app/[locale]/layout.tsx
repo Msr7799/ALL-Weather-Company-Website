@@ -71,7 +71,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "ALL Weather Cleaning Solutions",
-  "image": "https://allweather.bh/logo.png",
+  "image": "https://allweather.bh/logo1.png",
   "description": "Professional high-rise cleaning services using advanced drones and purified water technology.",
   "address": {
     "@type": "PostalAddress",

@@ -78,11 +78,11 @@ export function Hero() {
                     className="mb-8"
                 >
                     <Image
-                        src="/logo.png"
+                        src="/logo4.png"
                         alt="ALL Weather Logo"
-                        width={120}
-                        height={100}
-                        className="rounded-md border-6 !border-[#000]/60 mx-auto"
+                        width={350}
+                        height={150}
+                        className=" w-[250px] h-[250px] md:w-[250px] md:h-[250px] mx-auto mt-20 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20"
                         priority
                     />
                 </motion.div>
@@ -94,7 +94,14 @@ export function Hero() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-8 backdrop-blur-sm"
                 >
                     <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
-                    <span className="drop-shadow-sm">Advanced Technology</span>
+                    <span className="drop-shadow-sm">Now Available in Bahrain </span>
+                    <Image
+                        src="/Flag-of-Bahrain.svg"
+                        alt="Bahrain Flag"
+                        width={40}
+                        height={40}
+                        className="mb-1 rounded-[2px]"
+                    />
                 </motion.div>
 
                 <motion.h1
@@ -116,7 +123,7 @@ export function Hero() {
                 >
                     {t("subtitle")}
                 </motion.p>
-
+                 {/*}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -143,8 +150,9 @@ export function Hero() {
                         {t("learnMore")}
                     </Link>
                 </motion.div>
+                */}
 
-                {/* Stats */}
+                {/* Stats 
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -156,13 +164,15 @@ export function Hero() {
                         { value: "99%", label: "Client Satisfaction" },
                         { value: "24/7", label: "Available" },
                         { value: "0", label: "Accidents" },
-                    ].map((stat, i) => (
+                    ].
+                    map((stat, i) => (
                         <div key={i} className="text-center">
                             <div className="text-3xl md:text-4xl font-bold text-sky-400">{stat.value}</div>
                             <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
                         </div>
                     ))}
                 </motion.div>
+                */}
             </div>
 
             {/* Scroll Indicator */}
@@ -172,7 +182,7 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity }}
             >
                 <div className="flex flex-col items-center gap-2">
-                    <span className="text-xs text-muted-foreground uppercase tracking-widest">Scroll</span>
+                    <span className="text-xs text-muted-foreground uppercase tracking-widest">Learn More</span>
                     <ChevronDown className="w-5 h-5 text-sky-400" />
                 </div>
             </motion.div>
