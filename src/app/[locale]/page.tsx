@@ -98,9 +98,10 @@ export default function HomePage() {
               {/* Feature Tags */}
               <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-2">
                 {[
-                  locale === "ar" ? "سرعة في الإنجاز" : "Fast Execution",
-                  locale === "ar" ? "جودة عالية" : "High Quality",
-                  locale === "ar" ? "ضمان على العمل" : "Work Guarantee",
+                 
+                locale === "ar" ? "الاحترافية " : "Professional",
+                locale === "ar" ? "سرعة في الإنجاز" : "Fast Execution",
+                locale === "ar" ? "الدقة وضمان الجوده" : "Quality Guarantee",
                 ].map((feature, i) => (
                   <span
                     key={i}
