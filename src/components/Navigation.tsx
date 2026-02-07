@@ -69,13 +69,14 @@ export function Navigation({ locale }: { locale: string }) {
                             width={150}
                             height={150}
                             className="w-auto h-20"
+                            priority
                         />
                         <span className={cn(
                             "text-2xl font-bold tracking-tight hidden sm:block",
                             scrolled && !isDark ? "text-black/80" : "text-white"
                         )}>
                         </span>
-                    </Link> 
+                    </Link>
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-8">

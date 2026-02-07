@@ -59,10 +59,10 @@ export function BenefitsSection() {
                     {benefits.map((benefit, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{ delay: index * 0.05 }}
                             className="flex items-start gap-4 p-6 rounded-2xl bg-accent/10 border border-border/50 hover:bg-accent/20 transition-colors"
                         >
                             <div className="shrink-0 w-16 h-16 relative">

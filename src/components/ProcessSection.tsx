@@ -21,7 +21,7 @@ export function ProcessSection() {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-bold mb-4"
@@ -29,7 +29,7 @@ export function ProcessSection() {
                         {t("title")}
                     </motion.h2>
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
@@ -48,7 +48,7 @@ export function ProcessSection() {
                         return (
                             <motion.div
                                 key={step}
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.2 }}

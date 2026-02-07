@@ -19,10 +19,10 @@ export function StatsSection() {
                     {stats.map((stat, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: i * 0.2 }}
+                            transition={{ delay: i * 0.1 }}
                             className="p-6 rounded-2xl bg-white/5 border border-white/10"
                         >
                             <div className="text-4xl md:text-5xl font-bold text-sky-400 mb-2">{stat.value}</div>

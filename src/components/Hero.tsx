@@ -2,8 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 // Pre-defined particle positions to avoid hydration mismatch
@@ -17,17 +15,6 @@ const particlePositions = [
 export function Hero() {
     const t = useTranslations("Hero");
 
-    const [isDark, setIsDark] = useState(true);
-
-    // Watch for theme changes on html element
-    useEffect(() => {
-        const checkTheme = () => setIsDark(document.documentElement.classList.contains("dark"));
-        checkTheme();
-        const observer = new MutationObserver(checkTheme);
-        observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-        return () => observer.disconnect();
-    }, []);
-
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background VEDIO */}
@@ -37,6 +24,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     className="w-full h-full object-cover"
                 >
                     <source src="/hero.mp4" type="video/mp4" />
@@ -58,15 +46,15 @@ export function Hero() {
             </div>
 
             {/* Floating Particles - Fixed positions */}
-            <div className="absolute inset-0 z-[2]">
+            <div className="absolute inset-0 z-[2] pointer-events-none">
                 {particlePositions.map((pos, i) => (
                     <motion.div
                         key={i}
-                        className="absolute w-1 h-1 bg-sky-400/30 rounded-full"
+                        className="absolute w-1 h-1 bg-sky-400/30 rounded-full will-change-[transform]"
                         style={{ left: `${pos.left}%`, top: `${pos.top}%` }}
                         animate={{
-                            y: [0, -20, 0],
-                            opacity: [0.3, 0.8, 0.3],
+                            y: [0, -10, 0],
+                            opacity: [0.3, 0.6, 0.3],
                         }}
                         transition={{
                             duration: 3 + (i % 3),
@@ -79,107 +67,37 @@ export function Hero() {
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 text-center">
-                {/* Logo */}
-                {/* <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                    className="mb-8"
-                >
-                    <Image
-                        src={!isDark ? "/logo/logo2.png" : "/logo/logo7.png"}
-                        alt="ALL Weather logo"
-                        width={150}
-                        height={150}
-                        className=" w-[150px] h-[150px] md:w-[150px] md:h-[150px] mx-auto mt-20 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20"
-                        priority
-                    />
-                </motion.div> */}
-
-
 
                 <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-30 font-bold tracking-tight mb-4"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-30 font-bold tracking-tight mb-4 will-change-[transform]"
                 >
                     <span className="bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent">
                         {t("title")}
                     </span>
                 </motion.h1>
                 <motion.p
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent"
+                    className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent will-change-[transform]"
                 >
                     {t("subtitle")}
                 </motion.p>
-
-
-                {/*}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                >
-                    <Link
-                        href="/book"
-                        className="group relative inline-flex h-14 items-center justify-center gap-2 rounded-full bg-slate-900/40 border border-sky-500/50 text-sky-400 px-8 text-sm font-semibold backdrop-blur-md shadow-lg shadow-sky-500/10 transition-all hover:bg-sky-500 hover:border-sky-500 hover:text-white hover:shadow-sky-500/40"
-                    >
-                        <span>{t("cta")}</span>
-                        <motion.span
-                            animate={{ x: [0, 4, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity }}
-                        >
-                            →
-                        </motion.span>
-                    </Link>
-
-                    <Link
-                        href="/#services"
-                        className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-sky-500/30 bg-slate-900/40 backdrop-blur-sm px-8 text-sm font-medium text-white transition-all hover:bg-slate-800/60 hover:border-sky-500/50"
-                    >
-                        {t("learnMore")}
-                    </Link>
-                </motion.div>
-                */}
-
-                {/* Stats 
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7 }}
-                    className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-                >
-                    {[
-                        { value: "350+", label: "Buildings Cleaned" },
-                        { value: "99%", label: "Client Satisfaction" },
-                        { value: "24/7", label: "Available" },
-                        { value: "0", label: "Accidents" },
-                    ].
-                    map((stat, i) => (
-                        <div key={i} className="text-center">
-                            <div className="text-3xl md:text-4xl font-bold text-sky-400">{stat.value}</div>
-                            <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-                        </div>
-                    ))}
-                </motion.div>
-                */}
             </div>
 
             {/* Scroll Indicator */}
             <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-                animate={{ y: [0, 10, 0] }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 will-change-[transform]"
+                animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
             >
                 <div className="flex flex-col items-center gap-2">
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="inline-flex  items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-4 backdrop-blur-sm"
@@ -192,6 +110,7 @@ export function Hero() {
                             width={40}
                             height={40}
                             className="mb-1 rounded-[2px]"
+                            priority
                         />
                     </motion.div>
                     <span className="text-xs uppercase tracking-widest bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent">{t("scroll")}</span>
@@ -201,6 +120,7 @@ export function Hero() {
                         width={65}
                         height={65}
                         className="rounded-[2px]"
+                        priority
                     />
                     <Image
                         src="/icons/splash-drone2.svg"
@@ -208,8 +128,8 @@ export function Hero() {
                         width={20}
                         height={20}
                         className="mb-1 rounded-[2px]"
+                        priority
                     />
-                    {/* <ChevronDown className="w-5 h-5 text-sky-400" /> */}
                 </div>
             </motion.div>
         </section>

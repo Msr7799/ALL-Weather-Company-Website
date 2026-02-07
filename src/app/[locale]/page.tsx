@@ -1,15 +1,18 @@
 import { useLocale } from "next-intl";
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/Hero";
-import { BookingCalendar } from "@/components/BookingCalendar";
-import { ProcessSection } from "@/components/ProcessSection";
 import { WeatherWidget } from "@/components/WeatherWidget";
-import { BenefitsSection } from "@/components/BenefitsSection";
 import ClientLoaderWrapper from "@/components/ClientLoaderWrapper";
-import { ServicesSection } from "@/components/ServicesSection";
-import { TechnologySection } from "@/components/TechnologySection";
-import { StatsSection } from "@/components/StatsSection";
-import { FAQSection } from "@/components/FAQSection";
-import { ClientsSection } from "@/components/ClientsSection";
+
+// Dynamically import below-the-fold components
+const BenefitsSection = dynamic(() => import("@/components/BenefitsSection").then(mod => mod.BenefitsSection));
+const ServicesSection = dynamic(() => import("@/components/ServicesSection").then(mod => mod.ServicesSection));
+const TechnologySection = dynamic(() => import("@/components/TechnologySection").then(mod => mod.TechnologySection));
+const ProcessSection = dynamic(() => import("@/components/ProcessSection").then(mod => mod.ProcessSection));
+const StatsSection = dynamic(() => import("@/components/StatsSection").then(mod => mod.StatsSection));
+const FAQSection = dynamic(() => import("@/components/FAQSection").then(mod => mod.FAQSection));
+const ClientsSection = dynamic(() => import("@/components/ClientsSection").then(mod => mod.ClientsSection));
+const BookingCalendar = dynamic(() => import("@/components/BookingCalendar").then(mod => mod.BookingCalendar));
 
 export default function HomePage() {
   const locale = useLocale();

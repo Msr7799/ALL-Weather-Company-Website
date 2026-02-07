@@ -14,11 +14,11 @@ interface ServiceCardProps {
 export function ServiceCard({ title, description, icon: Icon, index }: ServiceCardProps) {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -8 }}
+            whileHover={{ y: -4 }}
             className={cn(
                 "group relative overflow-hidden rounded-2xl",
                 "bg-card border border-border/50",
@@ -32,7 +32,7 @@ export function ServiceCard({ title, description, icon: Icon, index }: ServiceCa
             {/* Icon */}
             <motion.div
                 className="relative z-10 w-14 h-14 rounded-xl bg-gradient-to-br from-slate-500/20 to-slate-500/5 border border-slate-200/20 flex items-center justify-center mb-6"
-                whileHover={{ rotate: [0, -5, 5, 0] }}
+                whileHover={{ rotate: [0, -2, 2, 0] }}
                 transition={{ duration: 0.4 }}
             >
                 <Icon className="w-7 h-7" style={{ color: "oklch(51.1% 0.096 186.391)" }} />
