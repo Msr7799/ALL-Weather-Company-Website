@@ -48,7 +48,7 @@ export function Footer({ locale }: { locale: string }) {
                     <div className="lg:col-span-2">
                         <Link href="/" className="flex items-center gap-3 mb-6">
                             <Image
-                                src={!isDark ? "/logo2.png" : "/logo7.png"}
+                                src={!isDark ? "/logo/logo2.png" : "/logo/logo7.png"}
                                 alt="ALL Weather"
                                 width={60}
                                 height={50}

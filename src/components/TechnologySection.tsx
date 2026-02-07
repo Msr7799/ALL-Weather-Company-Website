@@ -58,7 +58,7 @@ export function TechnologySection({ locale }: { locale: string }) {
                     >
                         <div className="aspect-square sm:aspect-video lg:aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-card to-accent/20 border border-border/50 shadow-2xl">
                             <Image
-                                src="/crew-page/crew-page-clear.png"
+                                src="/drone-images/drone-flying.svg"
                                 alt="Advanced Drone"
                                 width={1200}
                                 height={1200}

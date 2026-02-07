@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "@/i18n/routing";
-import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 // Pre-defined particle positions to avoid hydration mismatch
@@ -39,7 +38,6 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    poster="/crew-page/crew-page-clear.png"
                     className="w-full h-full object-cover"
                 >
                     <source src="/hero.mp4" type="video/mp4" />
@@ -99,7 +97,7 @@ export function Hero() {
                     />
                 </motion.div> */}
 
-           
+
 
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
@@ -111,7 +109,7 @@ export function Hero() {
                         {t("title")}
                     </span>
                 </motion.h1>
-                               <motion.p
+                <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
@@ -120,7 +118,7 @@ export function Hero() {
                     {t("subtitle")}
                 </motion.p>
 
-            
+
                 {/*}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -180,25 +178,25 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity }}
             >
                 <div className="flex flex-col items-center gap-2">
-         
-                     <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="inline-flex  items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-4 backdrop-blur-sm"
-                >
-                    <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
-                    <span className="drop-shadow-sm">{t("available")}</span>
-                    <Image
-                        src="/icons/Flag-of-Bahrain.svg"
-                        alt="Bahrain Flag"
-                        width={40}
-                        height={40}
-                        className="mb-1 rounded-[2px]"
-                    />
-                </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="inline-flex  items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-4 backdrop-blur-sm"
+                    >
+                        <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+                        <span className="drop-shadow-sm">{t("available")}</span>
+                        <Image
+                            src="/icons/Flag-of-Bahrain.svg"
+                            alt="Bahrain Flag"
+                            width={40}
+                            height={40}
+                            className="mb-1 rounded-[2px]"
+                        />
+                    </motion.div>
                     <span className="text-xs text-muted-foreground uppercase tracking-widest">{t("scroll")}</span>
-                          <Image
+                    <Image
                         src="/icons/splash-drone.svg"
                         alt="baby blue drone"
                         width={65}

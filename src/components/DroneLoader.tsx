@@ -106,7 +106,7 @@ const DroneLoader = ({ onComplete }: DroneLoaderProps) => {
             ctx.clearRect(0, 0, w, h);
             ctx.drawImage(offGray, 0, 0);
 
-            const duration = 10000;
+            const duration = 7000;
             // Linear fill 0 to 1
             const p = Math.min(1, elapsed / duration);
 
@@ -181,7 +181,7 @@ const DroneLoader = ({ onComplete }: DroneLoaderProps) => {
 
             <canvas
                 ref={canvasRef}
-                className="w-[350px] h-[200px] bg-transparent drop-shadow-[0_0_20px_rgba(0,0,0,0.304)] saturate-[2.5] brightness-100 mb-8"
+                className="w-[350px] h-[200px] bg-transparent drop-shadow-[0_0_20px_rgba(0,0,0,0.304)] saturate-[2.5] brightness-100 "
             />
             <div className="space-y-4 w-full max-w-3xl text-center px-4 min-h-[80px] flex items-center justify-center relative overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
                 <AnimatePresence mode="wait">
