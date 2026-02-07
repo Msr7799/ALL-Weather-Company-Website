@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://allweather.bh"; // استبدل هذا بدومينك الحقيقي
+    const baseUrl = "https://all-weather-bh.vercel.app"; // استبدل هذا بدومينك الحقيقي
 
     // اللغات المدعومة
     const locales = ["en", "ar"];
