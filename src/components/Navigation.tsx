@@ -64,19 +64,18 @@ export function Navigation({ locale }: { locale: string }) {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3">
                         <Image
-                            src={!isDark ? "/logo2.png" : "/logo5.png"}
+                            src={!isDark ? "/logo/logo2.png" : "/logo/logo7.png"}
                             alt="ALL Weather"
-                            width={50}
-                            height={40}
-                            className="w-auto h-10"
+                            width={150}
+                            height={150}
+                            className="w-auto h-20"
                         />
                         <span className={cn(
-                            "text-lg font-bold tracking-tight hidden sm:block",
+                            "text-2xl font-bold tracking-tight hidden sm:block",
                             scrolled && !isDark ? "text-black/80" : "text-white"
                         )}>
-                            ALL WEATHER
                         </span>
-                    </Link>
+                    </Link> 
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-8">

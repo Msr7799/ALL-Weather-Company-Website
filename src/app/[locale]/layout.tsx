@@ -2,6 +2,8 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { BackToTop } from "@/components/BackToTop";
 import { Navigation } from "@/components/Navigation";
+import { WhatsAppWidget } from "@/components/WhatsAppWidget";
+import { Footer } from "@/components/Footer";
 
 // ... existing imports
 
@@ -174,6 +176,8 @@ export default async function LocaleLayout({
           <main>
             {children}
           </main>
+          <Footer locale={locale} />
+          <WhatsAppWidget locale={locale} />
           <BackToTop />
         </NextIntlClientProvider>
       </body>

@@ -40,7 +40,7 @@ export default function CrewPage() {
             <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/crew-page/crew-page-clear.png"
+                        src="/crew-page/hero-crew-page.gif"
                         alt="Hero Background"
                         fill
                         className="object-cover"

@@ -83,44 +83,29 @@ export function Hero() {
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 text-center">
                 {/* Logo */}
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                     className="mb-8"
                 >
                     <Image
-                        src={!isDark ? "/logo2.png" : "/logo5.png"}
-                        alt="ALL Weather Logo"
-                        width={350}
+                        src={!isDark ? "/logo/logo2.png" : "/logo/logo7.png"}
+                        alt="ALL Weather logo"
+                        width={150}
                         height={150}
-                        className=" w-[250px] h-[250px] md:w-[250px] md:h-[250px] mx-auto mt-20 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20"
+                        className=" w-[150px] h-[150px] md:w-[150px] md:h-[150px] mx-auto mt-20 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20"
                         priority
                     />
-                </motion.div>
+                </motion.div> */}
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-8 backdrop-blur-sm"
-                >
-                    <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
-                    <span className="drop-shadow-sm">{t("available")}</span>
-                    <Image
-                        src="/Flag-of-Bahrain.svg"
-                        alt="Bahrain Flag"
-                        width={40}
-                        height={40}
-                        className="mb-1 rounded-[2px]"
-                    />
-                </motion.div>
+           
 
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-30 font-bold tracking-tight mb-4"
                 >
                     <span className="text-foreground">
                         {t("title")}
@@ -135,6 +120,22 @@ export function Hero() {
                 >
                     {t("subtitle")}
                 </motion.p>
+                     <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="inline-flex  items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-4 backdrop-blur-sm"
+                >
+                    <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+                    <span className="drop-shadow-sm">{t("available")}</span>
+                    <Image
+                        src="/icons/Flag-of-Bahrain.svg"
+                        alt="Bahrain Flag"
+                        width={40}
+                        height={40}
+                        className="mb-1 rounded-[2px]"
+                    />
+                </motion.div>
                 {/*}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

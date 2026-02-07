@@ -48,7 +48,7 @@ export function Footer({ locale }: { locale: string }) {
                     <div className="lg:col-span-2">
                         <Link href="/" className="flex items-center gap-3 mb-6">
                             <Image
-                                src={!isDark ? "/logo2.png" : "/logo5.png"}
+                                src={!isDark ? "/logo2.png" : "/logo7.png"}
                                 alt="ALL Weather"
                                 width={60}
                                 height={50}
@@ -141,7 +141,7 @@ export function Footer({ locale }: { locale: string }) {
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all"
+                                className="w-full h-full border-0"
                             />
                         </div>
                     </div>

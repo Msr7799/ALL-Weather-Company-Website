@@ -5,7 +5,6 @@ import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { GraduationCap, Shield, Cpu, Target, Users, Award } from "lucide-react";
 import Image from "next/image";
-import { Footer } from "@/components/Footer";
 
 export default function AboutPage() {
     const t = useTranslations("About");
@@ -88,11 +87,11 @@ export default function AboutPage() {
                         >
                             <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-card to-accent/20 border border-border/50">
                                 <Image
-                                    src="/about-drone.png"
+                                    src="/bahrain-dotted-map.png"
                                     alt="DJI Matrice 350 RTK Cleaning Drone"
                                     width={800}
-                                    height={600}
-                                    className="w-full h-full object-cover"
+                                    height={900}
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
 
@@ -134,22 +133,22 @@ export default function AboutPage() {
                                 {t("description")}
                             </p>
 
-                            {/* Stats */}
-                            <div className="grid grid-cols-3 gap-6 mb-8">
-                                {stats.map((stat, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.4, delay: i * 0.1 }}
-                                        className="text-center"
-                                    >
-                                        <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                                        <div className="text-2xl font-bold">{stat.value}</div>
-                                        <div className="text-xs text-muted-foreground">{stat.label}</div>
-                                    </motion.div>
-                                ))}
+                            {/* Values - Efficiency & Professionalism */}
+                            <div className="flex flex-wrap gap-4 mb-8">
+                                <div className="flex-1 min-w-[140px] bg-accent/10 border border-accent/20 rounded-2xl p-4 text-center">
+                                    <div className="w-10 h-10 mx-auto bg-cyan-500/10 rounded-full flex items-center justify-center mb-3">
+                                        <Shield className="w-5 h-5 text-cyan-400" />
+                                    </div>
+                                    <h3 className="font-bold text-lg mb-1">{locale === 'ar' ? 'الاحترافية' : 'Professionalism'}</h3>
+                                    <p className="text-xs text-muted-foreground">{locale === 'ar' ? 'معايير عالمية في الأداء' : 'World-class performance standards'}</p>
+                                </div>
+                                <div className="flex-1 min-w-[140px] bg-accent/10 border border-accent/20 rounded-2xl p-4 text-center">
+                                    <div className="w-10 h-10 mx-auto bg-cyan-500/10 rounded-full flex items-center justify-center mb-3">
+                                        <Cpu className="w-5 h-5 text-cyan-400" />
+                                    </div>
+                                    <h3 className="font-bold text-lg mb-1">{locale === 'ar' ? 'الكفاءة' : 'Efficiency'}</h3>
+                                    <p className="text-xs text-muted-foreground">{locale === 'ar' ? 'نتائج مثالية في وقت قياسي' : 'Perfect results in record time'}</p>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
@@ -231,8 +230,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <Footer locale={locale} />
+
         </div>
     );
 }
