@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = "https://allweather.bh"; // استبدل هذا بدومينك الحقيقي لاحقاً
+    const baseUrl = "https://all-weather-bh.vercel.app";
 
     return {
         rules: {

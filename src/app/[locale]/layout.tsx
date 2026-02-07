@@ -51,11 +51,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "ALL Weather" }],
   creator: "ALL Weather",
-  metadataBase: new URL("https://allweather.bh"),
+  metadataBase: new URL("https://all-weather-bh.vercel.app"),
   openGraph: {
     title: "ALL Weather | Professional Drone Cleaning Services",
     description: "Experts in high-rise facade cleaning using advanced Drone technology in Bahrain.",
-    url: "https://allweather.bh",
+    url: "https://all-weather-bh.vercel.app",
     siteName: "ALL Weather",
     locale: "en_US",
     type: "website",
@@ -71,7 +71,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  }
+  },
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en",
+      ar: "/ar",
+    },
+  },
 };
 
 // JSON-LD Structured Data for Local Business
@@ -94,7 +101,7 @@ const jsonLd = {
     "latitude": 26.0275,
     "longitude": 50.4842
   },
-  "url": "https://allweather.bh",
+  "url": "https://all-weather-bh.vercel.app",
   "telephone": "+97339939053",
   "priceRange": "$$",
   "openingHoursSpecification": [
