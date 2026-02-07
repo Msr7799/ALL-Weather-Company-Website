@@ -111,31 +111,16 @@ export function Hero() {
                         {t("title")}
                     </span>
                 </motion.h1>
-
-                <motion.p
+                               <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
+                    className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed"
                 >
                     {t("subtitle")}
                 </motion.p>
-                     <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="inline-flex  items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-4 backdrop-blur-sm"
-                >
-                    <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
-                    <span className="drop-shadow-sm">{t("available")}</span>
-                    <Image
-                        src="/icons/Flag-of-Bahrain.svg"
-                        alt="Bahrain Flag"
-                        width={40}
-                        height={40}
-                        className="mb-1 rounded-[2px]"
-                    />
-                </motion.div>
+
+            
                 {/*}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -195,8 +180,39 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity }}
             >
                 <div className="flex flex-col items-center gap-2">
+         
+                     <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="inline-flex  items-center gap-2 px-4 py-2 rounded-full bg-slate-900/60 border border-sky-500/30 text-sky-400 text-sm font-medium mb-4 backdrop-blur-sm"
+                >
+                    <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+                    <span className="drop-shadow-sm">{t("available")}</span>
+                    <Image
+                        src="/icons/Flag-of-Bahrain.svg"
+                        alt="Bahrain Flag"
+                        width={40}
+                        height={40}
+                        className="mb-1 rounded-[2px]"
+                    />
+                </motion.div>
                     <span className="text-xs text-muted-foreground uppercase tracking-widest">{t("scroll")}</span>
-                    <ChevronDown className="w-5 h-5 text-sky-400" />
+                          <Image
+                        src="/icons/splash-drone.svg"
+                        alt="baby blue drone"
+                        width={65}
+                        height={65}
+                        className="rounded-[2px]"
+                    />
+                    <Image
+                        src="/icons/splash-drone2.svg"
+                        alt="down arrow"
+                        width={20}
+                        height={20}
+                        className="mb-1 rounded-[2px]"
+                    />
+                    {/* <ChevronDown className="w-5 h-5 text-sky-400" /> */}
                 </div>
             </motion.div>
         </section>
