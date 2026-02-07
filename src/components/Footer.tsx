@@ -60,7 +60,7 @@ export function Footer({ locale }: { locale: string }) {
                         </Link>
                         <p className="text-muted-foreground leading-relaxed max-w-md">
                             {locale === "ar"
-                                ? "شركة رائدة في تنظيف المباني الشاهقة باستخدام طائرات الدرون المتطورة وتقنية المياه منزوعة الأيونات."
+                                ? "شركة رائدة في تنظيف المباني الشاهقة باستخدام طائرات الدرون المتطورة وتقنيات الحديثة ."
                                 : "A leading company in high-rise building cleaning using advanced drone technology and deionized water."}
                         </p>
 
