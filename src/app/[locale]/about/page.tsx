@@ -51,7 +51,6 @@ export default function AboutPage() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-background" />
 
                 <div className="container mx-auto px-4 relative z-10 pt-20">
                     <motion.div
@@ -85,7 +84,7 @@ export default function AboutPage() {
                             transition={{ duration: 0.6 }}
                             className="relative"
                         >
-                            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-card to-accent/20 border border-border/50">
+                            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-[#626262]/80 to-[#626262]/50 border border-border/50">
                                 <Image
                                     src="/bahrain-dotted-map.png"
                                     alt="DJI Matrice 350 RTK Cleaning Drone"
@@ -101,16 +100,15 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: 0.3 }}
-                                className="absolute -bottom-6 -right-6 bg-card rounded-2xl p-6 border border-border shadow-2xl"
+                                className="absolute -bottom-12 -right-6 bg-[#626262]/95 rounded-4xl p-4 border-4 !border-zinc-900/20 shadow-2xl"
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-                                        <Shield className="w-7 h-7 text-cyan-400" />
+                                    <div className="w-10 h-10 rounded-xl bg-cyan-700/20 flex items-center justify-center">
+                                        <div className="text-2xl font-bold">🇧🇭</div>
                                     </div>
                                     <div>
-                                        <div className="text-2xl font-bold">0</div>
-                                        <div className="text-sm text-muted-foreground">
-                                            {locale === "ar" ? "حوادث" : "Accidents"}
+                                        <div className="text-sm font-bold text-gray-950/80 ">
+                                            {locale === "ar" ? "شركة مصرحه ومعتمده" : "Authorized Company"}
                                         </div>
                                     </div>
                                 </div>

@@ -32,7 +32,6 @@ export function Hero() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background VEDIO */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/5 to-background z-10" />
                 <video
                     autoPlay
                     loop
@@ -105,7 +104,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-30 font-bold tracking-tight mb-4"
                 >
-                    <span className="text-foreground">
+                    <span className="bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent">
                         {t("title")}
                     </span>
                 </motion.h1>
@@ -113,7 +112,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed"
+                    className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent"
                 >
                     {t("subtitle")}
                 </motion.p>
@@ -195,7 +194,7 @@ export function Hero() {
                             className="mb-1 rounded-[2px]"
                         />
                     </motion.div>
-                    <span className="text-xs text-muted-foreground uppercase tracking-widest">{t("scroll")}</span>
+                    <span className="text-xs uppercase tracking-widest bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent">{t("scroll")}</span>
                     <Image
                         src="/icons/splash-drone.svg"
                         alt="baby blue drone"
